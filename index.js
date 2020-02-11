@@ -3,7 +3,7 @@ const fs = require('fs');
 const cors =require('cors');
 const bodyParser = require("body-parser");
 const mongoose = require('mongoose');
-
+const json = require('json')
 
 const db = require('./config/db');
 var jwtms = require('./controllers/jwt-service')
@@ -11,7 +11,6 @@ var jwtms = require('./controllers/jwt-service')
 var app = express();
 
 
-app.use(cors());
 mongoose.Promise = global.Promise;
 app.use(bodyParser.json());
 app.use(express.static(__dirname + '/public'));
@@ -33,8 +32,6 @@ app.listen(process.env.PORT || 5000, process.env.IP, function(req, res) //The Se
 {
     console.log("SERVER STARTED");
 });
-
-
 
 
 
@@ -83,4 +80,22 @@ app.post('/register', async function(req, res) {
 
 app.get('/home', async function(req, res) {
 
+})
+
+
+
+app.post('/api/sign', async function(req, res) {
+    // add api key tokens
+    //takes DATA as a body variable
+    console.log('it came here')
+    var obj = await jwtms.sign(req.body.data)
+    console.log(obj)
+    res.send(obj)
+
+
+})
+
+app.post('/api/verify', async function(req, res){
+    var obj = await jwtms.verify(req.body.token)
+    res.send(obj)
 })

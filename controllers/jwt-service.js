@@ -36,6 +36,17 @@ module.exports = {
 
     }, 
 
+    sign: async function sign(data) {
+        //the data accepted here NEEDS to be a string format
+        var callback = new Promise((res, rej) => {
+            var token = jwt.sign({data: data}, privateKEY, enc.signOptions);
+            res(token)
+        })
+        var toke = await callback;
+        console.log("token is:", toke)
+        return toke;
+    }
+
 
     
 }
