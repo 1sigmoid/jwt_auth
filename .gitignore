@@ -1,3 +1,7 @@
+# configuration directory
+conifg/
+
+
 # Logs
 logs
 *.log
