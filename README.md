@@ -3,5 +3,6 @@ The openservic api series is one that exists as a microservice at a certain link
 
 
 # things to do before deployment
-1. Add a config folder
-    1.1 Add a db.js file
+
+* Add a config folder
+    * Add a db.js file, with a module.exports method, which exports a single variable called mongoURI (link to your db)
