@@ -3,7 +3,8 @@ conifg/
 keys/
 
 #other
-/config
+/config/db.js
+/config/encryption.js
 /keys
 
 # Logs
@@ -29,6 +30,7 @@ lib-cov
 # Coverage directory used by tools like istanbul
 coverage
 *.lcov
+*.key
 
 # nyc test coverage
 .nyc_output
