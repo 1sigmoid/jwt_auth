@@ -2,6 +2,10 @@
 conifg/
 keys/
 
+#other
+/config
+/keys
+
 # Logs
 logs
 *.log
