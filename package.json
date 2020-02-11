@@ -15,5 +15,12 @@
   "bugs": {
     "url": "https://github.com/sumukshashidhar/openservice_jwt/issues"
   },
-  "homepage": "https://github.com/sumukshashidhar/openservice_jwt#readme"
+  "homepage": "https://github.com/sumukshashidhar/openservice_jwt#readme",
+  "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "body-parser": "^1.19.0",
+    "express": "^4.17.1",
+    "fs": "0.0.1-security",
+    "mongoose": "^5.8.11"
+  }
 }
